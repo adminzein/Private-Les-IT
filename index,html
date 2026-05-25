@@ -1,1 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Les - IT dan Umum</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <style>
+        body{
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f7fb;
+        }
+
+        /* Navbar */
+        .navbar{
+            background: linear-gradient(90deg,#0f172a,#1e293b);
+        }
+
+        .navbar-brand{
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .nav-link{
+            color: white !important;
+            margin-left: 10px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover{
+            color: #38bdf8 !important;
+        }
+
+        /* Hero Carousel */
+        .carousel-item{
+            height: 90vh;
+            min-height: 500px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .carousel-overlay{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.55);
+            top: 0;
+            left: 0;
+        }
+
+        .carousel-caption{
+            bottom: 25%;
+            z-index: 10;
+        }
+
+        .carousel-caption h1{
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .carousel-caption p{
+            font-size: 20px;
+        }
+
+        .btn-custom{
+            background: #0ea5e9;
+            color: white;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-weight: 600;
+        }
+
+        .btn-custom:hover{
+            background: #0284c7;
+            color: white;
+        }
+
+        /* Section */
+        .section-title{
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-custom{
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .card-custom:hover{
+            transform: translateY(-8px);
+        }
+
+        .icon-box{
+            width: 70px;
+            height: 70px;
+            background: #0ea5e9;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin: auto;
+        }
+
+        /* Footer */
+        footer{
+            background: #0f172a;
+            color: white;
+        }
+
+        .footer-link{
+            text-decoration: none;
+            color: #cbd5e1;
+        }
+
+        .footer-link:hover{
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <i class="bi bi-mortarboard-fill"></i> Private Les
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#tentang">Tentang</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#program">Program</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#kontak">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO CAROUSEL -->
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active"
+             style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600');">
+
+            <div class="carousel-overlay"></div>
+
+            <div class="carousel-caption text-start">
+                <h1>Private Les IT & Umum</h1>
+                <p>Belajar Coding, Desain, Office dan Mata Pelajaran Sekolah dengan Mentor Profesional.</p>
+
+                <a href="#" class="btn btn-custom mt-3">
+                    Daftar Sekarang
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item"
+             style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600');">
+
+            <div class="carousel-overlay"></div>
+
+            <div class="carousel-caption">
+                <h1>Kelas Modern & Interaktif</h1>
+                <p>Materi Lengkap dari Basic hingga Mahir dengan Sistem Pembelajaran Praktik.</p>
+
+                <a href="#" class="btn btn-custom mt-3">
+                    Lihat Program
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item"
+             style="background-image:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1600');">
+
+            <div class="carousel-overlay"></div>
+
+            <div class="carousel-caption text-end">
+                <h1>Belajar Bersama Mentor Ahli</h1>
+                <p>Private, Semi Private, dan Kelas Online untuk Semua Kalangan.</p>
+
+                <a href="#" class="btn btn-custom mt-3">
+                    Hubungi Kami
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Button -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+
+<!-- TENTANG -->
+<section class="py-5" id="tentang">
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200"
+                     class="img-fluid rounded-4 shadow">
+            </div>
+
+            <div class="col-lg-6">
+                <h2 class="section-title">Tentang Private Les</h2>
+
+                <p class="text-muted">
+                    Kami menyediakan layanan pembelajaran IT dan Umum untuk siswa SD, SMP, SMA,
+                    Mahasiswa hingga Umum.
+                </p>
+
+                <p class="text-muted">
+                    Materi meliputi:
+                    Coding, Desain Grafis, Microsoft Office, Akuntansi,
+                    Web Development, Canva, AI, dan lainnya.
+                </p>
+
+                <a href="#" class="btn btn-custom">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="py-5 bg-light" id="program">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Program Pembelajaran</h2>
+            <p class="text-muted">
+                Pilihan kelas terbaik untuk meningkatkan skill dan prestasi belajar.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- CARD 1 -->
+            <div class="col-md-4">
+                <div class="card card-custom p-4 text-center h-100">
+
+                    <div class="icon-box mb-4">
+                        <i class="bi bi-code-slash"></i>
+                    </div>
+
+                    <h4>Web Programming</h4>
+
+                    <p class="text-muted">
+                        Belajar HTML, CSS, Bootstrap, PHP, MySQL dan Laravel.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-md-4">
+                <div class="card card-custom p-4 text-center h-100">
+
+                    <div class="icon-box mb-4">
+                        <i class="bi bi-palette-fill"></i>
+                    </div>
+
+                    <h4>Desain Grafis</h4>
+
+                    <p class="text-muted">
+                        Belajar Canva, Photoshop dan CorelDraw dari dasar.
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-md-4">
+                <div class="card card-custom p-4 text-center h-100">
+
+                    <div class="icon-box mb-4">
+                        <i class="bi bi-book-half"></i>
+                    </div>
+
+                    <h4>Pelajaran Umum</h4>
+
+                    <p class="text-muted">
+                        Matematika, Bahasa Inggris, Akuntansi dan lainnya.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="bg-primary text-white p-5 rounded-4 text-center shadow">
+
+            <h2 class="fw-bold">Mulai Belajar Bersama Kami</h2>
+
+            <p>
+                Tingkatkan kemampuan IT dan akademik bersama mentor terbaik.
+            </p>
+
+            <a href="#" class="btn btn-light btn-lg rounded-pill px-4">
+                Gabung Sekarang
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="pt-5 pb-3" id="kontak">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <h4>Private Les</h4>
+
+                <p class="text-light-emphasis">
+                    Layanan kursus IT dan umum untuk pelajar dan masyarakat umum.
+                </p>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Menu</h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="#" class="footer-link">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#tentang" class="footer-link">Tentang</a>
+                    </li>
+
+                    <li>
+                        <a href="#program" class="footer-link">Program</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5>Kontak</h5>
+
+                <p>
+                    <i class="bi bi-whatsapp"></i> 0821-7189-4499
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope-fill"></i> info@privateles.com
+                </p>
+
+                <div class="d-flex gap-3 fs-4">
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+            <p class="mb-0">
+                © 2026 Private Les - IT dan Umum | All Rights Reserved
+            </p>
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
